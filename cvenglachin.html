@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laçın Abbasov</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      /* Ümumi tərtibat */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f3f8ff;
+    color: #2c3e50;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #3498db;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.95em;
+    margin-top: 10px;
+    color: #7f8c8d;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #3498db;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+p,
+ul {
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before {
+    content: '✔';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.projects,
+.experience {
+    margin-top: 20px;
+}
+
+.project,
+.job {
+    margin-bottom: 15px;
+}
+
+.project-title,
+.job-title {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.education p {
+    color: #34495e;
+    font-style: italic;
+}
+
+.personal-info {
+    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+}
+
+.personal-info p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #2c3e50;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #2c3e50;
+    color: #ffffff;
+}
+
+.language-skills, .work-abilities {
+    margin-top: 20px;
+}
+
+.language-skills ul, .work-abilities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.language-skills li, .work-abilities li {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.language-skills li::before, .work-abilities li::before {
+    content: '•';
+    color: #007acc;
+    margin-right: 10px;
+}
+
+.language-skills h2, .work-abilities h2 {
+    font-size: 1.3em;
+    color: #007acc;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+}
+
+
+/* Responsivlik üçün Media Queries */
+
+/* Mobil cihazlar üçün */
+@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .name-title {
+        font-size: 1.5em;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .skill {
+        margin: 5px 10px;
+    }
+
+    .projects, .experience {
+        margin-top: 15px;
+    }
+
+    .job, .project {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1em;
+    }
+
+    .language-skills h2, .work-abilities h2 {
+        font-size: 1.2em;
+    }
+
+    .language-skills li, .work-abilities li {
+        font-size: 0.9em;
+    }
+}
+
+/* Tablet cihazlar üçün */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+    .name-title {
+        font-size: 1.8em;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .skill {
+        margin: 5px 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1em;
+    }
+}
+
+/* Laptop və Desktop üçün */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 900px;
+        padding: 25px;
+    }
+
+    .header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name-title {
+        font-size: 2em;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .skills {
+        justify-content: flex-start;
+    }
+}
+
+
+    </style>
+</head>
+
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="https://avatars.githubusercontent.com/u/161557615?s=400&u=499c0e31027ff034ef1b4c967d773b21574aef5e&v=4"
+                    alt="Profile Picture" class="profile-img">
+                <div>
+                    <div class="name-title">Lachin Abbasov</div>
+                    <div class="contact-info">
+                        <div><strong>Email:</strong> tu7n8gcpt@code.edu.az</div>
+                        <div><strong>Phone:</strong> +994 77 750 51 55</div>
+                        <div><strong>LinkedIn:</strong> linkedin.com/in/lajhin-abbasov-3600a8309/</div>
+                        <div><strong>GitHub:</strong> https://github.com/LachinAbbasov</div>
+                    </div>
+                    <div class="section personal-info">
+                        <h2>Personal Information</h2>
+                        <p><strong>Date of Birth:</strong> 23.01.2002</p>
+                        <p><strong>Military Service:</strong> Completed.</p>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="section summary">
+                <h2>Summary</h2>
+                <p>Full Stack Developer with extensive knowledge and experience in React, Redux, and Node.js. Contributed to the success of projects with user-friendly interfaces and optimized code.</p>
+            </div>
+    
+            <div class="section experience">
+                <h2>Work Experience</h2>
+                <div class="job">
+                    <p class="job-title">Medical Representative, ORNADO MEDICINE LLC</p>
+                    <p>06.02.2023-01.08.2023</p>
+                    <ul>
+                        <li>Full-time</li>
+                    </ul>
+                </div>
+    
+                <div class="job">
+                    <p class="job-title">Salesperson, "AZCAKE" LLC</p>
+                    <p>12.12.2023-18.06.2024</p>
+                    <ul>
+                        <li>Full-time</li>
+                    </ul>
+                </div>
+    
+                <div class="job">
+                    <p class="job-title">Administrator, "AZCAKE" LLC</p>
+                    <p>01.08.2024 - Present</p>
+                    <ul>
+                        <li>Full-time</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="section education">
+                <h2>Education</h2>
+                <p><strong>University:</strong> Azerbaijan University of Architecture and Construction</p>
+                <p><strong>Degree:</strong> Bachelor's in Computer Science</p>
+                <p><strong>Year of Graduation:</strong> 2024</p>
+            </div>
+    
+            <div class="section skills">
+                <h2>Skills</h2>
+                <div class="skill">React</div>
+                <div class="skill">Redux</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">CSS</div>
+                <div class="skill">HTML</div>
+            </div>
+    
+            <div class="section language-skills">
+                <h2>Language Skills</h2>
+                <ul>
+                    <li>Azerbaijani - Native</li>
+                    <li>English - Intermediate</li>
+                </ul>
+            </div>
+    
+            <div class="section work-abilities">
+                <h2>Work Abilities</h2>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Time Management</li>
+                    <li>Leadership</li>
+                </ul>
+            </div>
+    
+            <div class="section projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <p class="project-title">Project 1</p>
+                    <p>Description of the project goes here.</p>
+                </div>
+                <div class="project">
+                    <p class="project-title">Project 2</p>
+                    <p>Description of the project goes here.</p>
+                </div>
+            </div>
+    
+            <div class="section hobbies">
+                <h2>Hobbies</h2>
+                <p>Programming, Reading, Traveling, Playing Chess.</p>
+            </div>
+    
+            <div class="section references">
+                <h2>References</h2>
+                <p>Available upon request.</p>
+            </div>
+    
+            <button>Download CV</button>
+        </div>
+    </body>
+    
+
+
+</html>

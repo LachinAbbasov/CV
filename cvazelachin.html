@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laçın Abbasov</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      /* Ümumi tərtibat */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f3f8ff;
+    color: #2c3e50;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #3498db;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.95em;
+    margin-top: 10px;
+    color: #7f8c8d;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #3498db;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+p,
+ul {
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before {
+    content: '✔';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.projects,
+.experience {
+    margin-top: 20px;
+}
+
+.project,
+.job {
+    margin-bottom: 15px;
+}
+
+.project-title,
+.job-title {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.education p {
+    color: #34495e;
+    font-style: italic;
+}
+
+.personal-info {
+    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+}
+
+.personal-info p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #2c3e50;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #2c3e50;
+    color: #ffffff;
+}
+
+.language-skills, .work-abilities {
+    margin-top: 20px;
+}
+
+.language-skills ul, .work-abilities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.language-skills li, .work-abilities li {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.language-skills li::before, .work-abilities li::before {
+    content: '•';
+    color: #007acc;
+    margin-right: 10px;
+}
+
+.language-skills h2, .work-abilities h2 {
+    font-size: 1.3em;
+    color: #007acc;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+}
+
+
+/* Responsivlik üçün Media Queries */
+
+/* Mobil cihazlar üçün */
+@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .name-title {
+        font-size: 1.5em;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .skill {
+        margin: 5px 10px;
+    }
+
+    .projects, .experience {
+        margin-top: 15px;
+    }
+
+    .job, .project {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1em;
+    }
+
+    .language-skills h2, .work-abilities h2 {
+        font-size: 1.2em;
+    }
+
+    .language-skills li, .work-abilities li {
+        font-size: 0.9em;
+    }
+}
+
+/* Tablet cihazlar üçün */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+    .name-title {
+        font-size: 1.8em;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .skill {
+        margin: 5px 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1em;
+    }
+}
+
+/* Laptop və Desktop üçün */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 900px;
+        padding: 25px;
+    }
+
+    .header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name-title {
+        font-size: 2em;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .skills {
+        justify-content: flex-start;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://avatars.githubusercontent.com/u/161557615?s=400&u=499c0e31027ff034ef1b4c967d773b21574aef5e&v=4"
+                alt="Profil Şəkli" class="profile-img">
+            <div>
+                <div class="name-title">Laçın Abbasov</div>
+                <div class="contact-info">
+                    <div><strong>Email:</strong> tu7n8gcpt@code.edu.az</div>
+                    <div><strong>Telefon:</strong> +994 77 750 51 55</div>
+                    <div><strong>LinkedIn:</strong> linkedin.com/in/lajhin-abbasov-3600a8309/</div>
+                    <div><strong>GitHub:</strong> https://github.com/LachinAbbasov</div>
+                </div>
+                <div class="section personal-info">
+                    <h2>Şəxsi Məlumatlar</h2>
+                    <p><strong>Doğum Tarixi:</strong> 23.01.2002</p>
+                    <p><strong>Hərbi Xidmət:</strong> Başa Vurulub.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section summary">
+            <h2>Xülasə</h2>
+            <p>Full Stack Developer. React, Redux və Node.js üzrə geniş bilik və təcrübəyə malikəm. İstifadəçi dostu
+                interfeyslər və optimallaşdırılmış kodla layihələrin uğuruna töhfə verib.</p>
+        </div>
+
+        <div class="section experience">
+            <h2>İş Təcrübəsi</h2>
+            <div class="job">
+                <p class="job-title">Tibbi nümayəndə, ORNADO MEDİCİNE" MƏHDUD MƏSULİYYƏTLİ CƏMİYYƏTİ </p>
+                <p>06.02.2023-01.08.2023</p>
+                <ul>
+                    <li>Full-time</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <p class="job-title">Satıcı, "AZCAKE" MƏHDUD MƏSULİYYƏTLİ CƏMİYYƏTİ</p>
+                <p>12.12.2023-18.06.2024</p>
+                <ul>
+                    <li>Full-time</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <p class="job-title">Adminstrator, "AZCAKE" MƏHDUD MƏSULİYYƏTLİ CƏMİYYƏTİ</p>
+                <p>27.05.2024-02.12.2024</p>
+                <ul>
+                    <li>Full-time</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section projects">
+            <h2>Layihələr</h2>
+            <div class="project">
+                <p class="project-title">E-Ticarət Platforması</p>
+                <p>React, Node.js və MongoDB istifadə edərək e-ticarət platforması hazırladı, satışlarda 40% artım əldə
+                    edildi.</p>
+            </div>
+
+            <div class="project">
+                <p class="project-title">Portfolio Saytı</p>
+                <p>HTML, CSS və JavaScript istifadə edərək dinamik və cəlbedici portfolio saytı yaratdı.</p>
+            </div>
+
+            <div class="project">
+                <p class="project-title">Məlumat Bazası Saytı</p>
+                <p>Əmtəə bazası üçün yaradılması, redaktə olunması və saxlanmasını təmin edən veb-sayt hazırladı.</p>
+            </div>
+        </div>
+
+        <div class="section skills">
+            <h2>Bacarıqlar</h2>
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Redux</span>
+                <span class="skill">Redux-Toolkit</span>
+                <span class="skill">Redux-Query</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">MongoDB</span>
+            </div>
+        </div>
+
+        <div class="section language-skills">
+            <h2>Dil Bilikləri</h2>
+            <ul>
+                <li>Azerbaycan Milli - Ana Dili</li>
+                <li>Türk - Yüksək Səviyyə</li>
+                <li>İngilis - B1</li>
+                <li>Rus - Orta</li>
+            </ul>
+        </div>
+        
+        <div class="section work-abilities">
+            <h2>İş Qabiliyyətləri</h2>
+            <ul>
+                <li>Komanda ilə işləmə bacarığı</li>
+                <li>Müştəri ilə əlaqə qurma bacarığı</li>
+                <li>Problemləri sürətlə həll etmək bacarığı</li>
+                <li>Yaradıcı düşünmə və yenilikçi yanaşmalar</li>
+                <li>Zaman idarəetmə bacarığı</li>
+            </ul>
+        </div>
+        
+
+        <div class="section education">
+            <h2>Təhsil</h2>
+            <p>Bakalavr</p>
+            <p>Heydər Əliyev adına Hərbi İnstitut - Qoşun Kəşfiyyatı(Taqım Komandiri) (2019-2022) " Hərbi Xidmət zamanı qazanılmış müvvəqqəti Xəstəliyə görə təxris olunub Aztu -da təhsilimə Bərpa olunmuşam" </p>
+            <p>Bakalavr</p>
+            <p>Azərbaycan Texniki Universiteti - İnformasiya Təhlükəsizliyi (2023 - ?)</p>
+        </div>
+    </div>
+</body>
+
+</html>
